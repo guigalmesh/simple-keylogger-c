@@ -1,8 +1,10 @@
 #include <stdbool.h>
+#include <arpa/inet.h>
 
 #define SERVER_PORT 7777
 #define BACKLOG 10
 #define EXIT_FAILURE -1
+#define DEVICES_PATH "/dev/input/"
 
 typedef struct{
     int key_code; // código bruto da tecla (ex: 30 = A)

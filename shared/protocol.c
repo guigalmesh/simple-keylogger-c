@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <string.h>
+
 #include "protocol.h"
 
 void must_init(const char *message, int errcode){

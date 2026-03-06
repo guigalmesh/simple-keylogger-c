@@ -8,22 +8,17 @@
 #include <netinet/in.h>
 #include <shared/protocol.h>
 
-#include "server.h"
-
-void fill_server_addr(struct sockaddr_in *server_sockaddr){
-    server_sockaddr->sin_family = PF_INET; // IPv4
-    server_sockaddr->sin_port = SERVER_PORT; // define a porta
-    server_sockaddr->sin_addr.s_addr = htonl(INADDR_ANY); // servidor vai aceitar conexões de qualquer interface
-    memset(server_sockaddr->sin_zero, 0, 8); // padding para encher os 8 bytes restantes
-}
-
 int main(){
     // cria o ponto de comunicação inicial, devolve um file descriptor
     int server_socketFd = socket(PF_INET, SOCK_STREAM, IPPROTO_TCP);
     must_init("socket() failed - error creating socket fd\n", server_socketFd);
 
     struct sockaddr_in server_sockAddr;
-    fill_server_addr(&server_sockAddr);
+
+    server_sockAddr.sin_family = PF_INET; // IPv4
+    server_sockAddr.sin_port = SERVER_PORT; // define a porta
+    server_sockAddr.sin_addr.s_addr = htonl(INADDR_ANY); // servidor vai aceitar conexões de qualquer interface
+    memset(server_sockAddr.sin_zero, 0, 8); // padding para encher os 8 bytes restantes
     
     // passamos a struct para bindar o socket a uma porta
     must_init("bind() failed - error binding socket to a port\n", bind(server_socketFd, (struct sockaddr*)&server_sockAddr, sizeof(server_sockAddr)));
