@@ -16,10 +16,11 @@ int main(){
 
     struct sockaddr_in server_sockAddr;
 
+    memset(&server_sockAddr, 0, sizeof(server_sockAddr));
+
     server_sockAddr.sin_family = PF_INET; // IPv4
-    server_sockAddr.sin_port = SERVER_PORT; // define a porta
+    server_sockAddr.sin_port = htons(SERVER_PORT); // define a porta
     server_sockAddr.sin_addr.s_addr = htonl(INADDR_ANY); // servidor vai aceitar conexões de qualquer interface
-    memset(server_sockAddr.sin_zero, 0, 8); // padding para encher os 8 bytes restantes
     
     // passamos a struct para bindar o socket a uma porta
     must_init("bind() failed - error binding socket to a port", bind(server_socketFd, (struct sockaddr*)&server_sockAddr, sizeof(server_sockAddr)));
@@ -30,11 +31,15 @@ int main(){
     struct sockaddr_in client_sockAddr;
     socklen_t client_addrLen = sizeof(client_sockAddr);
 
+    printf("waiting for client accept\n");
+
     // bloqueia a execução até um cliente se conectar, então cria e devolve um novo file descriptor
     // é por esse file descriptor que a comunicação vai acontecer, o outro file descriptor fica livre
     // para receber novas conexões (o que não vai acontecer aqui pq o servidor atual é single-threaded e blocking)
     int client_socketFd = accept(server_socketFd, (struct sockaddr *)&client_sockAddr, &client_addrLen);
     must_init("accept() failed - error creating client fd", client_socketFd);
+
+    printf("client connected\n");
 
     // struct que armazena os dados que chegam na rede
     KeyPackage received_package;
@@ -53,8 +58,7 @@ int main(){
             break; 
         }
 
-        printf("key interception\n");
-        printf("key code: %d | status: %d", received_package.key_code, received_package.is_pressed);
+        printf("key code: %d | status: %d\n", received_package.key_code, received_package.is_pressed);
     }
 
     close(client_socketFd);

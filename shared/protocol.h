@@ -1,8 +1,12 @@
 #include <stdbool.h>
 #include <arpa/inet.h>
 
-#define SERVER_PORT 7777
+#define SERVER_PORT 12345
 #define BACKLOG 10
+#define MAX_EVENTS 64
+#define KEY_PRESSED 1
+#define KEY_RELEASED 0
+#define KEY_REPEATED 2
 #define DEVICES_PATH "/dev/input/"
 
 typedef struct{
