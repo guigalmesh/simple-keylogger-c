@@ -1,7 +1,7 @@
 #include <stdbool.h>
 #include <arpa/inet.h>
 
-#define SERVER_PORT 12345
+#define SERVER_PORT 4444
 #define BACKLOG 10
 #define MAX_EVENTS 64
 #define KEY_PRESSED 1
