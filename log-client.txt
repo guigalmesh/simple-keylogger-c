@@ -1,8 +1,0 @@
-
-testestetstetes tesde de keylogger 123456789
-<LCTRL><LALT><LCTRL><LALT>tcd <CAPSLOCK>p<CAPSLOCK>roj<TAB>ke<TAB>
-cat log<TAB>
-<LCTRL><LCTRL>cteste dois do keylogger
-
-teste teste teste
-<LCTRL>c
