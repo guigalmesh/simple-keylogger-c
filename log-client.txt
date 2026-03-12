@@ -1,22 +1,8 @@
-o i   t u d o   b e m   <LINEFEED> w   m a k l f a d l k f a k l f a d k l f d f l <LCTRL> c m i n h a   s e n h a   [ e <LSHIFT> /   <KP1> <KP2> <KP3> <KP4> <KP5> <KP6> <KP7> <KP8> <KP9> <LCTRL> <LALT> t c a t   l o g <BACKSPACE> c d   l o g <TAB> <BACKSPACE> <BACKSPACE> <BACKSPACE> <CAPSLOCK> p <CAPSLOCK> r o <TAB> k <BACKSPACE> j e <TAB> k e <TAB> 
- c a t   l o g <TAB> 
- t e s t e t e s t e t s t e t e s   e g <BACKSPACE> <BACKSPACE> s e g r o   s e g r e d o   s e g r o   e u   i m a n g o <BACKSPACE> <BACKSPACE> <BACKSPACE> g i n o   q u e   o   ;   n a o   f u n c i o n a   s e n s a ; a o 
- c a t   l o g <TAB> 
- c l e a r 
- c a t   l o g <TAB> 
- <BACKSPACE> <LCTRL> c isso [e um teste do mu<BACKSPACE>eu keylogger, compiladores paradigmas de programa;'ao facebook c<BACKSPACE>sistemas de informacao
-<LCTRL>clear
-log<BACKSPACE><BACKSPACE><BACKSPACE>cat log<TAB>
-clear
-c1b3r31<LSHIFT>210ps<CAPSLOCK>dg<CAPSLOCK>
-<LCTRL>c<LCTRL>cexit
-c<BACKSPACE>exit
-<LCTRL>zclear
-<LCTRL>o
-<LCTRL>xclear
-<LALT><TAB><LALT><TAB>ls
-cp cl<TAB><BACKSPACE>mv cl<TAB>' <LCTRL><LALT>tls
-<KATAKANA><CAPSLOCK>vm<TAB>
-clear<BACKSPACE><BACKSPACE><BACKSPACE><BACKSPACE><BACKSPACE><CAPSLOCK>clear
-<LCTRL>ceu devo estar sendo monitorado durante esse instante
-os cara tao de olho em mimteste do keylogger bem sue<BACKSPACE>cedido<LSHIFT><KATAKANA><KATAKANA>
+
+testestetstetes tesde de keylogger 123456789
+<LCTRL><LALT><LCTRL><LALT>tcd <CAPSLOCK>p<CAPSLOCK>roj<TAB>ke<TAB>
+cat log<TAB>
+<LCTRL><LCTRL>cteste dois do keylogger
+
+teste teste teste
+<LCTRL>c
